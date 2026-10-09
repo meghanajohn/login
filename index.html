@@ -487,11 +487,10 @@
       <div class="brand">
         <div class="logo">👕</div>
         <div>
-          <h1>SizeSmart AI</h1>
-          <p>Smart clothing inventory assistant</p>
+          <h1>Stockwise</h1>
+          <p>Smarter Inventory. Better Stores</p>
         </div>
       </div>
-      <div class="demo">● DEMO DATA · HACKATHON PROTOTYPE</div>
     </header>
 
     <main>
@@ -533,7 +532,7 @@
         <div>
           <div class="panel">
             <h3>Stock by style, store &amp; size</h3>
-            <p class="sub">Search or filter the demo inventory.</p>
+            <p class="sub">Search or filter the inventory.</p>
 
             <div class="filters">
               <input id="search" placeholder="Search style, size or category...">
@@ -594,7 +593,7 @@
             </div>
 
             <div class="notice">
-              Demo insight: demand for larger sizes is strong. Check size-level stock before making decisions based on total stock alone.
+              insight: demand for larger sizes is strong. Check size-level stock before making decisions based on total stock alone.
             </div>
           </div>
         </div>
@@ -607,8 +606,7 @@
           </div>
 
           <div class="panel">
-            <h3>How the assistant decides</h3>
-            <p class="sub">Simple logic for the beginner prototype</p>
+            <h3>How the assistant decides</h3>>
             <div class="notice">
               <strong>1. Transfer</strong> — one store has extra units while another has low stock and faster sales.<br><br>
               <strong>2. Reorder</strong> — stock is low and other stores cannot cover the demand.<br><br>
@@ -618,17 +616,12 @@
           </div>
         </div>
       </section>
-
-      <div class="footer">
-        SizeSmart AI · Beginner hackathon prototype · Uses sample data only; no real stock is changed.
-      </div>
     </main>
 
     <div class="toast" id="toast" role="status"></div>
   </section>
 
   <script>
-    // Demo login: both fields must equal 123
     document.getElementById("loginForm").addEventListener("submit", function (event) {
       event.preventDefault();
 
@@ -727,7 +720,7 @@
             <span style="font-size:11px;color:#667085">
               ${
                 action.status === "pending" ? "Needs review" :
-                action.status === "approved" ? "Approved (demo)" : "Dismissed"
+                action.status === "approved" ? "Approved ()" : "Dismissed"
               }
             </span>
           </div>
@@ -737,7 +730,7 @@
 
           ${
             action.status === "pending"
-              ? `<button type="button" onclick="act('${action.id}','approved')">✓ Approve demo</button>
+              ? `<button type="button" onclick="act('${action.id}','approved')">✓ Approve </button>
                  <button class="light" type="button" onclick="act('${action.id}','dismissed')">Dismiss</button>`
               : ""
           }
@@ -757,7 +750,7 @@
 
       showToast(
         status === "approved"
-          ? "Demo recommendation approved. No real stock changed."
+          ? " recommendation approved. No real stock changed."
           : "Recommendation dismissed."
       );
     }
