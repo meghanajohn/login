@@ -1,16 +1,118 @@
-<script>
-function login() {
-    const username =
-        document.getElementById("email").value.trim();
 
-    const password =
-        document.getElementById("password").value;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockwise - Login</title>
 
-    if (username === "" || password === "") {
-        alert("Please enter username and password");
-        return;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #808000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    window.location.href = "choice.html";
-}
-</script>
+        .login-box {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            width: 320px;
+            box-shadow: 0 4px 20px #00000015;
+        }
+
+        h1 {
+            text-align: center;
+            color: #263b65;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 13px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #263b65;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background: #192b4d;
+        }
+
+        #message {
+            color: #c62828;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h1>Stockwise</h1>
+        <p>Login to your account</p>
+
+        <form id="loginForm">
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <p id="message"></p>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const email =
+                    document.getElementById("Email").value.trim();
+
+                const password =
+                    document.getElementById("Password").value;
+
+                if (!email || !password) {
+                    document.getElementById("message").textContent =
+                        "Please enter email and password.";
+                    return;
+                }
+
+                window.location.href = "choice.html";
+            });
+    </script>
+
+</body>
+</html>
