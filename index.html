@@ -1,0 +1,16 @@
+<script>
+function login() {
+    const username =
+        document.getElementById("email").value.trim();
+
+    const password =
+        document.getElementById("password").value;
+
+    if (username === "" || password === "") {
+        alert("Please enter username and password");
+        return;
+    }
+
+    window.location.href = "choice.html";
+}
+</script>
